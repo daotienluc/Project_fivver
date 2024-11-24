@@ -34,13 +34,11 @@ const SignUp = () => {
         password: "",
       },
       onSubmit: (values) => {
-        console.log(values);
         authService
           .signUp(values)
           .then((res) => {
             handleNotification("success", "Đăng ký thành công", 3000);
             navigate(pathDefault.signIn);
-            console.log(res);
           })
           .catch((err) => {
             console.log(err);

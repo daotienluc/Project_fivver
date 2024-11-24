@@ -1,8 +1,8 @@
 import React from "react";
-import Svgs from "../../../../components/Input/svgs";
+import Svgs from "../../../../../components/Input/svgs";
 import { CheckCircleOutlined } from "@ant-design/icons";
-import { ButtonOutline } from "../../../../components/Button/ButtonCustom";
-import fiverrProImg from "./../../../../assets/img/fiverr-pro.jpg";
+import { ButtonOutline } from "../../../../../components/Button/ButtonCustom";
+import fiverrProImg from "./../../../../../assets/img/fiverr-pro.jpg";
 
 const FiverrPro = () => {
   return (

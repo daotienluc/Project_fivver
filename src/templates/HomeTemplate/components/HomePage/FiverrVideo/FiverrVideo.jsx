@@ -1,5 +1,5 @@
 import React from "react";
-import FiverrVideoLink from "./../../../../assets/video/fiverrVideo.mp4";
+import FiverrVideoLink from "./../../../../../assets/video/fiverrVideo.mp4";
 
 const FiverrVideo = () => {
   return (

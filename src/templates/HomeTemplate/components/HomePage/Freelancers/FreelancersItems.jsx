@@ -1,5 +1,5 @@
 import React from "react";
-import Svgs from "../../../../components/Input/svgs";
+import Svgs from "../../../../../components/Input/svgs";
 
 const FreelancersItems = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import "./PopularServices.scss";
+import "./CarouselCustom.scss";
 import { Link } from "react-router-dom";
 
-const PopularServicesItems = ({ backgroundColor, content, image }) => {
+const CarouselItems = ({ backgroundColor, content, image }) => {
   return (
     <>
       <Link
@@ -12,11 +12,11 @@ const PopularServicesItems = ({ backgroundColor, content, image }) => {
           {content}
         </h2>
         <div>
-          <img src={image} alt="" className="rounded-2xl" />
+          <img src={image} alt="" className="rounded-2xl w-full object-cover" />
         </div>
       </Link>
     </>
   );
 };
 
-export default PopularServicesItems;
+export default CarouselItems;

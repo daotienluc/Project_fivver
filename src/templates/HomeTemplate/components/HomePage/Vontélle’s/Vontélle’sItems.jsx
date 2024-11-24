@@ -1,5 +1,5 @@
 import React from "react";
-import Vontélle from "./../../../../assets/img/Vontélle.jpg";
+import Vontélle from "./../../../../../assets/img/Vontélle.jpg";
 import { Link } from "react-router-dom";
 
 const VontéllesItems = () => {

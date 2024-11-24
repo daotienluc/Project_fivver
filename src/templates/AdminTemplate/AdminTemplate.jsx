@@ -35,7 +35,7 @@ const AdminTemplate = () => {
     <Layout className="min-h-screen">
       <Sider
         width={250}
-        className="bg-orange-300 sider-content"
+        className=" sider-content"
         trigger={null}
         collapsible
         collapsed={collapsed}
@@ -45,6 +45,7 @@ const AdminTemplate = () => {
         </div>
         <Menu
           mode="inline"
+          theme="dark"
           items={[
             {
               key: "1",

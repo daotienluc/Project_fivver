@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Icons from "../../../components/Icons";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, matchPath, useLocation, useNavigate } from "react-router-dom";
 import { pathDefault } from "./../../../common/path";
 import DropdownHeader from "../../../components/Dropdown/DropdownHeader";
 import {
@@ -16,6 +16,13 @@ import { Dropdown } from "antd";
 import useViewPort from "../../../hooks/useViewPort";
 
 const HeaderTemplate = () => {
+  const location = useLocation();
+  const isDetailsPage =
+    matchPath({ path: "/details/:id" }, location.pathname) ||
+    matchPath({ path: "/profile/:id" }, location.pathname) ||
+    matchPath({ path: "/settings/:id" }, location.pathname);
+
+  console.log(location);
   const { width } = useViewPort();
   const [keyWord, setKeyWord] = useState("");
   const [open, setOpen] = useState(false);
@@ -50,7 +57,7 @@ const HeaderTemplate = () => {
       return {
         key: item.id,
         label: (
-          <div className="flex gap-5 items-center">
+          <Link to={`/details/${item.id}`} className="flex gap-5 items-center">
             <img src={item.congViec.hinhAnh} alt="" className="w-20 h-20" />
             <div>
               <h4 className="text-lg font-semibold">
@@ -58,7 +65,7 @@ const HeaderTemplate = () => {
               </h4>
               <p className="mt-2">Đánh giá {item.congViec.danhGia}</p>
             </div>
-          </div>
+          </Link>
         ),
       };
     });
@@ -69,7 +76,13 @@ const HeaderTemplate = () => {
   };
 
   return (
-    <header className="py-5 border-b border-b-gray-200 fixed w-full bg-white z-10 top-0">
+    <header
+      className={
+        isDetailsPage
+          ? "py-5 border-b border-b-gray-200 w-full bg-white"
+          : "py-5 border-b border-b-gray-200 fixed w-full bg-white z-10 top-0"
+      }
+    >
       <div className="container flex justify-between items-center">
         <div className="flex flex-1 space-x-2 items-center">
           <Link to={pathDefault.homePage}>

@@ -1,6 +1,6 @@
 import React from "react";
 import FreelancersItems from "./FreelancersItems";
-import { ButtonOutline } from "../../../../components/Button/ButtonCustom";
+import { ButtonOutline } from "../../../../../components/Button/ButtonCustom";
 
 const Freelancers = () => {
   return (
